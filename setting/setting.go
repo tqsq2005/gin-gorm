@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	confPath = "./.env"
+	confPath = "conf/.env"
 )
 
 func LoadConf() {

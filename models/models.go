@@ -3,6 +3,7 @@ package models
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 	"time"
@@ -36,6 +37,12 @@ func init() {
 		dbName))
 
 	if err != nil {
+		log.Println(dbType)
+		log.Println(fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
+			user,
+			password,
+			host,
+			dbName))
 		log.Println(err)
 	}
 
