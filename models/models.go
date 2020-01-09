@@ -6,6 +6,7 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
+	"github.com/tqsq2005/gin-gorm/setting"
 	"time"
 )
 
@@ -22,6 +23,10 @@ func init() {
 		err error
 		dbType, dbName, user, password, host, tablePrefix string
 	)
+
+	//载入配置
+	//TODO:#疑问#为什么不载入配置就获取不到？
+	setting.LoadConf()
 
 	dbType = viper.GetString("DB_CONNECTION")
 	dbName = viper.GetString("DB_DATABASE")
