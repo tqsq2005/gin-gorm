@@ -3,9 +3,11 @@ package routers
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
+	ginSwagger "github.com/swaggo/gin-swagger"
+	"github.com/swaggo/gin-swagger/swaggerFiles"
 	"github.com/tqsq2005/gin-gorm/middleware/jwt"
 	"github.com/tqsq2005/gin-gorm/routers/api"
-	v1 "github.com/tqsq2005/gin-gorm/routers/v1"
+	v1 "github.com/tqsq2005/gin-gorm/routers/api/v1"
 )
 
 func InitRouter() *gin.Engine  {
@@ -16,6 +18,8 @@ func InitRouter() *gin.Engine  {
 
 	//获取token
 	r.GET("/auth", api.GetAuth)
+	//swagger doc
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	apiV1 := r.Group("/api/v1")
 	apiV1.Use(jwt.JWT())

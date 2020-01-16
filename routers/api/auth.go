@@ -6,7 +6,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/tqsq2005/gin-gorm/models"
 	"github.com/tqsq2005/gin-gorm/pkg/e"
-	"github.com/tqsq2005/gin-gorm/utils"
+	"github.com/tqsq2005/gin-gorm/pkg/utils"
 	"net/http"
 )
 
@@ -15,6 +15,13 @@ type auth struct {
 	Password string `valid:"Required;MaxSize(50)"`
 }
 
+// @Summary Get Auth
+// @Produce  json
+// @Param username query string true "userName"
+// @Param password query string true "password"
+// @Success 200 {object} app.Response
+// @Failure 500 {object} app.Response
+// @Router /auth [get]
 func GetAuth(c *gin.Context)  {
 	username := c.Query("username")
 	password := c.Query("password")

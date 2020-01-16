@@ -3,7 +3,7 @@ package jwt
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/tqsq2005/gin-gorm/pkg/e"
-	"github.com/tqsq2005/gin-gorm/utils"
+	"github.com/tqsq2005/gin-gorm/pkg/utils"
 	"net/http"
 	"time"
 )
