@@ -13,8 +13,7 @@ import (
 
 // @Summary 获取多个文章的标签
 // @Produce  json
-// @Param name query string false "Name"
-// @Param state query int false "State"
+// @Param token query string false "Token"
 // @Success 200 {object} app.Response
 // @Failure 500 {object} app.Response
 // @Router /api/v1/tags [get]

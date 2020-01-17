@@ -23,14 +23,14 @@ func init() {
 	log.SetOutput(F)
 }
 
-// @title Golang gin-gorm API
+// @title API列表
 // @version 1.0
-// @description An example of gin and gorm.
+// @description Gin-Gorm的API列表.
 // @termsOfService http://github.com/tqsq2005/gin-gorm
 
 // @contact.name API Support
 // @contact.url http://github.com/tqsq2005/gin-gorm
-// @contact.email gin@gin-gorm.com
+// @contact.email tqsq2005@gmail.com
 
 // @license.name MIT
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html

@@ -15,7 +15,8 @@ type auth struct {
 	Password string `valid:"Required;MaxSize(50)"`
 }
 
-// @Summary Get Auth
+// @Summary 获取Token认证
+// @Tags 认证
 // @Produce  json
 // @Param username query string true "userName"
 // @Param password query string true "password"

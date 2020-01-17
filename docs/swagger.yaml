@@ -10,15 +10,15 @@ definitions:
     type: object
 info:
   contact:
-    email: gin@gin-gorm.com
+    email: tqsq2005@gmail.com
     name: API Support
     url: http://github.com/tqsq2005/gin-gorm
-  description: An example of gin and gorm.
+  description: Gin-Gorm的API列表.
   license:
     name: MIT
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: http://github.com/tqsq2005/gin-gorm
-  title: Golang gin-gorm API
+  title: API列表
   version: "1.0"
 paths:
   /api/v1/articles:
@@ -193,14 +193,10 @@ paths:
   /api/v1/tags:
     get:
       parameters:
-      - description: Name
+      - description: Token
         in: query
-        name: name
+        name: token
         type: string
-      - description: State
-        in: query
-        name: state
-        type: integer
       produces:
       - application/json
       responses:
@@ -323,5 +319,7 @@ paths:
           description: Internal Server Error
           schema:
             $ref: '#/definitions/app.Response'
-      summary: Get Auth
+      summary: 获取Token认证
+      tags:
+      - 认证
 swagger: "2.0"

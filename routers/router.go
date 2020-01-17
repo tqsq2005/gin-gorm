@@ -5,6 +5,7 @@ import (
 	"github.com/spf13/viper"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
+	_ "github.com/tqsq2005/gin-gorm/docs"
 	"github.com/tqsq2005/gin-gorm/middleware/jwt"
 	"github.com/tqsq2005/gin-gorm/routers/api"
 	v1 "github.com/tqsq2005/gin-gorm/routers/api/v1"
